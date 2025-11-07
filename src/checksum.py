@@ -4,7 +4,14 @@ def modulo11Checksum(ISBNNumber: str):
 
     digits = [int(char) for char in ISBNNumber if char.isdigit()]
 
-    checkDigit = digits[-1]
+    assert (len(digits) == 9 and ISBNNumber[-1] == "X") || len(digits) == 10, "letters in number, not nums"
+
+    if (ISBNNumber[-1] == "X"):
+        #trash number
+        digits += [-1]
+        checkDigit = 10
+    else:
+        checkDigit = digits[-1]
 
     total = 0
     for i in range(len(digits) - 1):
