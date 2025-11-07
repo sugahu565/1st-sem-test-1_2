@@ -7,7 +7,7 @@ def binSearch(xs: list[int], x: int):
     while left <= right:
         mid = (left + right) // 2
         if xs[mid] == x:
-            return xs[mid]
+            return mid
         if xs[mid] < x:
             left = mid + 1
         else:
