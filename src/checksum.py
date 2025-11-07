@@ -21,3 +21,14 @@ def modulo11Checksum(ISBNNumber: str):
 
     checksum = total + checkDigit
     return checksum % 11 == 0
+
+if __name__ == "__main__":
+    while True:
+        isbn = input("Enter number: ")
+        if isbn == -1:
+            break
+        result = modulo11Checksum(isbn)
+        if result:
+            print("correct")
+        else:
+            print("incorrect")
