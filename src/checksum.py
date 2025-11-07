@@ -25,10 +25,16 @@ def modulo11Checksum(ISBNNumber: str):
 if __name__ == "__main__":
     while True:
         isbn = input("Enter number: ")
-        if isbn == -1:
+
+        if isbn == "-1":
             break
-        result = modulo11Checksum(isbn)
-        if result:
-            print("correct")
-        else:
-            print("incorrect")
+
+        try:
+            result = modulo11Checksum(isbn)
+            if result:
+                print("correct")
+            else:
+                print("incorrect")
+        except Exception as e:
+            print(f"{type(e).__name__}: {e}")
+
