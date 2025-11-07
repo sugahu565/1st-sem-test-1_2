@@ -1,10 +1,8 @@
 def modulo11Checksum(ISBNNumber: str):
 
-    assert len(ISBNNumber) == 10, "Invalid lenght"
-
     digits = [int(char) for char in ISBNNumber if char.isdigit()]
 
-    assert (len(digits) == 9 and ISBNNumber[-1] == "X") or len(digits) == 10, "letters in number, not nums"
+    assert (len(digits) == 9 and ISBNNumber[-1] == "X") or len(digits) == 10, "invalid lenght"
 
     if (ISBNNumber[-1] == "X"):
         #trash number
