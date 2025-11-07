@@ -1,5 +1,7 @@
 def modulo11Checksum(ISBNNumber: str):
 
+    assert len(ISBNNumber) == 10, "Invalid lenght"
+
     digits = [int(char) for char in ISBNNumber if char.isdigit()]
 
     checkDigit = digits[-1]
