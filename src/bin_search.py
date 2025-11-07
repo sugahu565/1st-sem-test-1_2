@@ -1,4 +1,4 @@
-def binSearch(xs: list[int], x: int):
+def bin_search(xs: list[int], x: int):
 
     if type(x) != int:
         raise "x is not int"
