@@ -2,7 +2,7 @@ from src.checksum import modulo11Checksum
 
 
 def test_good():
-    assert modulo11Checksum("2-266-11156-8")
+    assert modulo11Checksum("2-266-11156-6")
 
 
 def test_bad():
