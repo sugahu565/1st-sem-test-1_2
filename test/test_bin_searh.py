@@ -11,3 +11,12 @@ def test_start():
 
 def test_not_in_list():
     assert binSearch([1, 2, 3, 4], 5) == -1
+
+
+def test_binary_lenght_middle_left():
+    assert binSearch([1, 2, 3, 4, 5, 6, 7, 8], 4) == 3
+
+
+def test_binary_lenght_middle_right():
+    assert binSearch([1, 2, 3, 4, 5, 6, 7, 8], 5) == 4
+
