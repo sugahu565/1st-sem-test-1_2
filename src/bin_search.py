@@ -4,7 +4,7 @@ def binSearch(xs: list[int], x: int):
         raise "x is not int"
 
     left, right = 0, len(xs) - 1
-    while left < right:
+    while left <= right:
         mid = (left + right) // 2
         if xs[mid] == x:
             return xs[mid]
