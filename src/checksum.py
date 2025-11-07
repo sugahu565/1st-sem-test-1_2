@@ -8,7 +8,7 @@ def modulo11Checksum(ISBNNumber: str):
 
     total = 0
     for i in range(len(digits) - 1):
-        weight = 10
+        weight = 10 - i
         digit = digits[i]
         total += digit * weight
 
